@@ -1,5 +1,7 @@
 .main {
-    background-color: silver;
+    background-image:url(../../assets/images/mainbg.jpg);
+    background-size: cover;
+    background-position: center;
     color: $primaryColor;
     .container {
         @extend %container;
@@ -9,6 +11,9 @@
         flex-direction: column;
         justify-content: center;
         height: 655px;
+        @include media(sm){
+            height: 840px;
+        }
     }
     &__title{
         @include text(32px, 700, 39px, $primaryColor); 
@@ -17,6 +22,13 @@
         span {
             color: $accentColor;
         }
+        @include media(sm){
+            max-width: 544px;
+        }
+        @include media(md){
+            max-width: 724px;
+        }
+
     }
     &__price-box {
         height: 93px;
@@ -45,15 +57,25 @@
         max-height: 47px;
         margin-top: 10px;
         transform: translateX(4px);
-    }
+        -webkit-filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        -webkit-transform: translateX(4px);
+        -moz-transform: translateX(4px);
+        -ms-transform: translateX(4px);
+        -o-transform: translateX(4px);
+}
     &__btn {
         width: 275px;
         height: 68px;
         border: 3px solid $primaryColor;
         border-radius: 7px;
         background-color: transparent;
-        @include text(16px, 900, 20px, white); 
+        @include text(16px,900,20px,white);
         filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
         transform: translateY(-6px);
-    }
+        -webkit-filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        -o-transform: translateY(-6px);
+}
 }

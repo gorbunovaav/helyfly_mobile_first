@@ -10,3 +10,90 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.header {
+    background-color: #fff;
+    border: 1px solid;
+}
+
+.header .container {
+    width: 100%;
+    padding: 0 15px;
+    border: 1px solid red;
+}
+
+@media screen and (min-width: 576px) {
+    .header .container {
+        padding: 0 35px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .header .container {
+        padding: 0 35px;
+    }
+}
+
+.header__inner {
+    height: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 45px;
+}
+
+@media screen and (min-width: 576px) {
+    .header__logo {
+        margin-right: 36px;
+    }
+}
+
+.header__phone-city {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5286EC;
+}
+
+@media screen and (min-width: 576px) {
+    .header__phone-city {
+        display: none;
+    }
+}
+
+.header__phone {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    .header__phone {
+        display: block;
+    }
+}
+
+.header__phone span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B3B3B3;
+}
+
+.header__phone__phone-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #37373F;
+}
