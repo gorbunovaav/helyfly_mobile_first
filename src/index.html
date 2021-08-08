@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"> -->
     <title>Mobile first</title>
 </head>
 
@@ -84,7 +90,7 @@
                     <div class="about__feedback feedback">
                         <img src="./assets/images/about/feedback_img1.png" alt="feedback__img1" class="feedback__img1">
                         <div class="feedback__inner">
-                            <span class="feedback__text">Более <span class="feedback__text--bold">150</span> отзывов с
+                            <span class="feedback__text">Более <span class="feedback__text--bold">50</span> отзывов с
                                 оценкой</span>
                             <img src="./assets/images/about/feedback_img2.png" alt="feedback_img2"
                                 class="feedback__img2">
@@ -94,7 +100,87 @@
             </div>
         </div>
     </section>
-    <script src="assets/js/script.js"></script>
+    <section class="photo">
+        <div class="container">
+            <h3 class="photo__heading">Фотографии пакета</h3>
+            <div class="photo__slider">
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_1.png" alt="Slider_photo1" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_2.png" alt="Slider_photo2" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_3.png" alt="Slider_photo3" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_4.png" alt="Slider_photo4" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_5.png" alt="Slider_photo5" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_6.png" alt="Slider_photo6" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_7.png" alt="Slider_photo7" class="photo__img">
+                </div>
+                <div class="photo__slider-item">
+                    <img src="./assets/images/photo/photo_8.png" alt="Slider_photo8" class="photo__img">
+                </div>
+            </div>
+            <a href="" class="photo__link">Показать все фото</a>
+        </div>
+    </section>
+    <!-- <script src="assets/js/script.js"></script> -->
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript"> -->
+    <script type="text/javascript">
+        // $(document).ready(function () {
+        //     console.log("ready!");
+        //     $('.photo__slider').slick();
+        // });
+        // $('.photo__slider').slick({
+        //     infinite: true,
+        //     slidesToShow: 1.5,
+        //     slidesToScroll: 1
+        // });
+        $(window).on("load resize", function() {
+            var width = $(document).width();
+            if (width > 768) {
+                $('.photo__slider').slick('unslick');
+            }
+            else if ((width < 768) && (width > 576)) {
+                $('.photo__slider').not('.slick-initialized').slick({  
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                });
+            }
+            else if (width < 576) {
+                $('.photo__slider').not('.slick-initialized').slick({  
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                });
+            };
+            //     if($('.photo__slider').hasClass('slick-initialized')) {
+            //         $('.photo__slider').slick('unslick');
+            // }
+        })
+                    
+        
+    </script>
+
 </body>
 
 </html>

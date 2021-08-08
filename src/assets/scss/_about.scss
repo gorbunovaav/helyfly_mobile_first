@@ -62,14 +62,14 @@
         }
         &-wrapper{
             position: relative;
-            ::after{
+            &::after{
                 content: "";
                 width: 12px;
                 height: 17px;
                 position: absolute;
                 background-image:url(./../images/about/about_pseudo_pic.png);
                 top: 0;
-                z-index:100;
+                left: 0;
             }
         }
     }
@@ -116,7 +116,7 @@
         align-items: center;
         
 
-        ::before {
+        &::before {
             content: "";
             width: 290px;
             height: 0.5px;
