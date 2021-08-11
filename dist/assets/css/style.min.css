@@ -1,13 +1,13 @@
-.header .container, .main .container, .about .container, .photo .container {
+.header .container, .main .container, .about .container, .photo .container, .person .container {
   width: 100%;
   padding: 0 15px;
   border: 1px solid red;
   max-width: 1140px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .about .container, .photo .container {
+    .header .container, .main .container, .about .container, .photo .container, .person .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .about .container, .photo .container {
+    .header .container, .main .container, .about .container, .photo .container, .person .container {
       padding: 0 50px; } }
 
 *,
@@ -166,7 +166,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 67px 240px 400px;
-  justify-items: center; }
+  justify-content: center; }
   @media (min-width: 576px) {
     .about__wrapper {
       grid-template-rows: 67px 383px 390px; } }
@@ -413,5 +413,145 @@ body {
   @media (min-width: 768px) {
     .photo__link {
       display: block; } }
+
+.person .container {
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  @media (min-width: 576px) {
+    .person .container {
+      margin-bottom: 43px; } }
+
+.person__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 282px 1fr;
+  position: relative; }
+  @media (min-width: 1280px) {
+    .person__wrapper {
+      grid-template-columns: 584px 555px;
+      grid-template-rows: 1fr; } }
+  .person__wrapper::before {
+    content: "";
+    width: 668px;
+    height: 0.5px;
+    background-color: #C7C7C7;
+    position: absolute;
+    left: 0px;
+    top: -39px;
+    display: none; }
+    @media (min-width: 768px) {
+      .person__wrapper::before {
+        display: block; } }
+    @media (min-width: 1280px) {
+      .person__wrapper::before {
+        width: 1139px;
+        left: -50px; } }
+
+.person__inner {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center; }
+  @media (min-width: 1280px) {
+    .person__inner {
+      grid-column: 2;
+      grid-row: 1; } }
+
+.person__img {
+  margin-bottom: 23px; }
+  @media (min-width: 768px) {
+    .person__img {
+      margin-top: 13px; } }
+  .person__img--wrapper {
+    position: relative; }
+    .person__img--wrapper::after {
+      content: "";
+      width: 31px;
+      height: 27px;
+      position: absolute;
+      background-image: url(./../images/person/person_pseudo_heart.svg);
+      top: -15px;
+      left: 182px; }
+
+.person__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #37373F;
+  margin-bottom: 16px; }
+
+.person__work {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #37373F;
+  margin-bottom: 10px; }
+
+.person__link--top {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5286EC;
+  width: 229px;
+  margin-bottom: 25px;
+  text-align: center; }
+
+.person__link--bottom {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #5286EC;
+  position: relative; }
+  .person__link--bottom::after {
+    content: "";
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    background-image: url(./../images/person/person_pseudo_arrow.svg);
+    top: 9px;
+    right: -21px; }
+
+.person__list {
+  list-style-type: none;
+  position: relative; }
+  @media (min-width: 1280px) {
+    .person__list {
+      grid-column: 1;
+      grid-row: 1; } }
+  .person__list::after {
+    content: "";
+    width: 506px;
+    height: 0.5px;
+    background-color: #C7C7C7;
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    display: none; }
+    @media (min-width: 576px) {
+      .person__list::after {
+        display: block; } }
+    @media (min-width: 576px) {
+      .person__list::after {
+        width: 668px; } }
+    @media (min-width: 1280px) {
+      .person__list::after {
+        width: 1139px;
+        left: -50px; } }
+  .person__list-item {
+    margin-bottom: 30px; }
+
+.person__heading {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #37373F;
+  margin-bottom: 14px; }
+
+.person__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #37373F;
+  margin-bottom: 22px; }
 
 /*# sourceMappingURL=style.min.css.map */

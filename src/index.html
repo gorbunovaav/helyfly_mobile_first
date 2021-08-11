@@ -132,6 +132,54 @@
             <a href="" class="photo__link">Показать все фото</a>
         </div>
     </section>
+    <section class="person">
+        <div class="container">
+            <div class="person__wrapper">
+            <div class="person__inner">
+                <div class="person__img--wrapper">
+                <img src="./assets/images/person/person_pic.png" alt="person__img" class="person__img">
+            </div>
+                <h3 class="person__name">Марина Иванова</h3>
+                <span class="person__work">Фотограф</span>
+                <a href="" class="person__link--top">Показать больше информации о фотографе</a>
+            </div>
+            <ul class="person__list">
+                <li class="person__list-item">
+                    <h3 class="person__heading">Об организаторе:</h3>
+                    <p class="person__text">
+                        Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь членом группы экспертов
+                        туристической отрасли, которые хорошо разбираются
+                        в маркетинге, операциях
+                        и услугах обслуживания клиентов, специализирующихся
+                        на совместном использовании
+                        и частных турах.
+                    </p>
+                    <p class="person__text">
+                        Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение,
+                        которое соответствует бюджету и планам клиента.
+                        Мы никогда не зависим
+                        от субпоставщиков
+                        и не свяжемся…
+                    </p>
+                    <a href="" class="person__link--bottom">Читать еще</a>
+                </li>
+                <li class="person__list-item">
+                    <h3 class="person__heading">Что я предоставлю:</h3>
+                    <p class="person__text">
+                        Встречу вас на машине после длительного перелёта.
+                        Качественный подбор места
+                        и локации для вашей съемки.
+                        При необходимости всегда возможно прерваться
+                        на обед/ужин.
+                        Более 50 фотографий на выходе
+                        с обработкой и замечательные впечатления о Дубае!
+                    </p>
+                    <a href="" class="person__link--bottom">Читать еще</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </section>
     <!-- <script src="assets/js/script.js"></script> -->
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
@@ -154,20 +202,18 @@
         //     slidesToShow: 1.5,
         //     slidesToScroll: 1
         // });
-        $(window).on("load resize", function() {
+        $(window).on("load resize", function () {
             var width = $(document).width();
             if (width > 768) {
                 $('.photo__slider').slick('unslick');
-            }
-            else if ((width < 768) && (width > 576)) {
-                $('.photo__slider').not('.slick-initialized').slick({  
+            } else if ((width < 768) && (width > 576)) {
+                $('.photo__slider').not('.slick-initialized').slick({
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                 });
-            }
-            else if (width < 576) {
-                $('.photo__slider').not('.slick-initialized').slick({  
+            } else if (width < 576) {
+                $('.photo__slider').not('.slick-initialized').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
@@ -177,8 +223,6 @@
             //         $('.photo__slider').slick('unslick');
             // }
         })
-                    
-        
     </script>
 
 </body>

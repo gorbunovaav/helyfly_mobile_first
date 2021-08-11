@@ -13,7 +13,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 67px 240px 400px;
-        justify-items: center;
+        justify-content: center;
         @include media(xs){
             grid-template-rows: 67px 383px 390px;
         }
