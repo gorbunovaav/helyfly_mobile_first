@@ -1,21 +1,25 @@
-.person{
+.person {
     .container {
-        margin:0 auto;
+        margin: 0 auto;
         @extend %container;
-        margin-bottom:10px;
-        @include media(xs){
-            margin-bottom:43px;
+        margin-bottom: 10px;
+
+        @include media(xs) {
+            margin-bottom: 43px;
         }
     }
-    &__wrapper{
-        display:grid;
+
+    &__wrapper {
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 282px 1fr;
         position: relative;
-        @include media(md){
+
+        @include media(md) {
             grid-template-columns: 584px 555px;
             grid-template-rows: 1fr;
         }
+
         &::before {
             content: "";
             width: 668px;
@@ -25,110 +29,131 @@
             left: 0px;
             top: -39px;
             display: none;
-            @include media(sm){
+
+            @include media(sm) {
                 display: block;
             }
-            @include media(md){
+
+            @include media(md) {
                 width: 1139px;
                 left: -50px;
             }
         }
     }
-    &__inner{
+
+    &__inner {
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        @include media(md){
+
+        @include media(md) {
             grid-column: 2;
             grid-row: 1;
         }
+    }
+
+    &__img {
+        margin-bottom: 23px;
+
+        @include media(sm) {
+            margin-top: 13px;
         }
 
-    &__img{
-        margin-bottom:23px;
-        @include media(sm){
-            margin-top:13px;
-        }
-        &--wrapper{
+        &--wrapper {
             position: relative;
-            &::after{
+
+            &::after {
                 content: "";
                 width: 31px;
                 height: 27px;
                 position: absolute;
-                background-image:url(./../images/person/person_pseudo_heart.svg);
+                background-image: url(./../images/person/person_pseudo_heart.svg);
                 top: -15px;
                 left: 182px;
             }
+        }
     }
-}
-    &__name{
+
+    &__name {
         @include text(18px, 500, 22px, $textColor);
         margin-bottom: 16px;
     }
-    &__work{
+
+    &__work {
         @include text(14px, 400, 21px, $textColor);
         margin-bottom: 10px;
     }
-    &__link{
-        &--top{
+
+    &__link {
+        &--top {
             @include text(14px, 500, 21px, $linkColor);
-            width:229px;
+            width: 229px;
             margin-bottom: 25px;
             text-align: center;
         }
-        &--bottom{
+
+        &--bottom {
             @include text(16px, 500, 23px, $linkColor);
             position: relative;
-            &::after{
+
+            &::after {
                 content: "";
                 width: 11px;
                 height: 6px;
                 position: absolute;
-                background-image:url(./../images/person/person_pseudo_arrow.svg);
+                background-image: url(./../images/person/person_pseudo_arrow.svg);
                 top: 9px;
                 right: -21px;
             }
         }
-        
+
     }
-    &__list{
+
+    &__list {
         list-style-type: none;
         position: relative;
-        @include media(md){
+
+        @include media(md) {
             grid-column: 1;
             grid-row: 1;
         }
+
         &::after {
             content: "";
             width: 506px;
             height: 0.5px;
             background-color: $secondaryColor;
             position: absolute;
-            left:0;
+            left: 0;
             bottom: -19px;
             display: none;
-            @include media(xs){
+
+            @include media(xs) {
                 display: block;
             }
-            @include media(xs){
+
+            @include media(xs) {
                 width: 668px;
             }
-            @include media(md){
+
+            @include media(md) {
                 width: 1139px;
                 left: -50px;
             }
         }
-        &-item{
+
+        &-item {
             margin-bottom: 30px;
         }
     }
-    &__heading{
+
+    &__heading {
         @include text(18px, 500, 26px, $textColor);
         margin-bottom: 14px;
     }
-    &__text{
+
+    &__text {
         @include text(16px, 400, 24px, $textColor);
         margin-bottom: 22px;
 
