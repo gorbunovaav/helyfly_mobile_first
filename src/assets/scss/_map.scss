@@ -1,0 +1,129 @@
+.map{
+    .container{
+        margin: 0 auto;
+        // @extend %container;
+    }
+    &__iframe{
+        height: 453px;
+        width: 100%;
+        @include media(xs){
+            height: 509px;
+        }
+        @include media(md){
+            position: absolute;
+            
+        }
+    }
+    &__inner{
+        width: 274px;
+        height: 380px;
+        margin: 0 auto;
+        margin-top: 52px;
+        margin-bottom: 40px;
+        border: 1px solid $secondaryColor;
+        @include media(xs){
+            width: 400px;
+        }
+        @include media(md){
+            position: relative;
+            background-color: white;
+            margin: 0;
+            width: 420px;
+            height: 469px;
+            left: 70px;
+            // right: 790px;
+            top: 20px;
+        }
+    }
+    &__list-item{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 52px;
+        @include media(md){
+            margin: 0;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 35px;
+            padding:0;
+        }
+        // height: 128px;
+        // justify-content: center;
+        // align-items:center;
+    }
+    &__slider{
+        @include media(md){
+        margin: 51px 0 0 30px;
+        
+        }
+        &-inner{
+            display: flex;
+            align-items:center;
+            flex-direction: column;
+            @include media(md){
+                align-items:flex-start;
+            }
+        }
+    }
+    &__img{
+        margin-bottom: 20px;
+        @include media(md){
+            margin: 0;
+            margin-right: 18px;
+
+        }
+    }
+    &__heading{
+        margin-bottom: 10px;
+        @include text(16px, 500, 23px, $textColor);
+        @include media(md){
+            @include text(18px, 500, 27px, $textColor);
+        }
+
+    }
+    &__text{
+        margin-bottom: 19px;
+        @include text(14px, 400, 20px, $textColor);
+        @include media(md){
+            margin: 0;
+            @include text(18px, 400, 26px, $textColor);
+        }
+    }
+    &__person{
+        display: flex;
+        margin-left: 30px;
+        margin-top: 44px;
+        &-img{
+            height: 67px;
+            width: 67px;
+            margin-right: 11px;
+        }
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        &-name{
+            @include text(16px, 500, 20px, $textColor);
+            margin-bottom: 5px;
+            @include media(md){
+                @include text(18px, 500, 22px, $textColor);
+            }
+        }
+        &-work{
+            @include text(14px, 400, 21px, $textColor);
+            margin-bottom: 7px;
+            @include media(md){
+                @include text(16px, 400, 21px, $textColor);
+            }
+        }
+        &-link{
+            @include text(14px, 500, 21px, $linkColor);
+            &--about{
+                @include media(md){
+                    display: none;
+                }
+            }
+        }
+    }
+}
