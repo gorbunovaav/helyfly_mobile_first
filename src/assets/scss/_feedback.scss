@@ -1,0 +1,125 @@
+.feedback{
+    .container{
+        margin: 0 auto;
+        @extend %container;
+    }
+    &__heading{
+        text-align: center;
+        @include text(26px, 400, 39px, $textColor);
+        margin-bottom: 50px;
+    }
+    &__list{
+        
+        &-item{
+            list-style-type: none;
+            margin-bottom: 74px;
+            position: relative;
+            &--wrapper{
+                display:flex;
+                margin-bottom: 25px;
+            }
+            &--last{
+                display: none;
+            }
+            &::after {
+                content: "";
+                width: 290px;
+                height: 0.5px;
+                background-color: $secondaryColor;
+                position: absolute;
+                left:0;
+                bottom:-45px;
+            }
+        }
+    }
+    &__img{
+        width: 84px;
+        height: 84px;
+        margin-right: 18px;
+    }
+    &__name{
+        @include text(16px, 500, 19px, $textColor);
+        margin-bottom: 6px;
+    }
+    &__work{
+        @include text(14px, 400, 21px, $textColor);
+        margin-bottom: 7px;
+    }
+    &__recommend{
+        margin-left: 20px;
+        @include text(14px, 400, 21px, $textColorLight);
+        position: relative;
+        &::before{
+            content: "";
+            width: 16px;
+            height: 15px;
+            position: absolute;
+            background-image:url(./../images/feedback/feedback_pseudo.png);
+            top: 0px;
+            left: -19px;
+        }
+    }
+    &__text{
+        @include text(14px, 400, 21px, $textColor);
+        margin-bottom: 50px;
+        margin-top: 15px;
+        width: 292px;   
+    }
+    &__date{
+        @include text(14px, 400, 21px, $textColorLight);
+    }
+    &__link{
+        @include text(17px, 500, 25px, $linkColor);
+        &--wrapper{
+            text-align: center;
+        }
+    }
+    .rating-group {
+        display: inline-flex;
+    }
+    
+      /* make hover effect work properly in IE */
+    .rating__icon {
+        pointer-events: none;
+    }
+    
+      /* hide radio inputs */
+    .rating__input {
+        position: absolute !important;
+        left: -9999px !important;
+    }
+    
+      /* hide 'none' input from screenreaders */
+    .rating__input--none {
+        display: none
+    }
+    
+      /* set icon padding and size */
+    .rating__label {
+        cursor: pointer;
+        padding: 0 0.1em;
+        font-size: 2rem;
+    }
+    
+      /* set default star color */
+    .rating__icon--star {
+        color: orange;
+    }
+    
+      /* if any input is checked, make its following siblings grey */
+    .rating__input:checked ~ .rating__label .rating__icon--star {
+        color: #ddd;
+    }
+    
+      /* make all stars orange on rating group hover */
+    .rating-group:hover .rating__label .rating__icon--star {
+        color: orange;
+    }
+    
+      /* make hovered input's following siblings grey on hover */
+    .rating__input:hover ~ .rating__label .rating__icon--star {
+        color: #ddd;
+    }
+    }
+    
+

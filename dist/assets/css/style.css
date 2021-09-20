@@ -1,4 +1,4 @@
-.header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container {
+.header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container, .feedback .container {
     width: 100%;
     padding: 0 15px;
     border: 1px solid red;
@@ -6,13 +6,13 @@
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container {
+    .header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container, .feedback .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container {
+    .header .container, .main .container, .about .container, .photo .container, .person .container, .calendar .container, .feedback .container {
         padding: 0 50px;
     }
 }
@@ -1184,6 +1184,13 @@ body {
     flex-direction: column;
 }
 
+@media (min-width: 1280px) {
+    .map__slider-inner {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
 .map__img {
     margin-bottom: 20px;
 }
@@ -1296,3 +1303,90 @@ body {
         display: none;
     }
 }
+
+.feedback .container {
+    margin: 0 auto;
+}
+
+.feedback__heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: #37373F;
+    margin-bottom: 50px;
+}
+
+.feedback__list-item--wrapper {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.feedback__img {
+    width: 84px;
+    height: 84px;
+    margin-right: 18px;
+}
+
+.feedback__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #37373F;
+    margin-bottom: 6px;
+}
+
+.feedback__work {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+    margin-bottom: 7px;
+}
+
+.rating-group {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+/* make hover effect work properly in IE */
+.rating__icon {
+    pointer-events: none;
+}
+
+/* hide radio inputs */
+.rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* hide 'none' input from screenreaders */
+.rating__input--none {
+    display: none;
+}
+
+/* set icon padding and size */
+.rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+
+/* set default star color */
+.rating__icon--star {
+    color: orange;
+}
+
+/* if any input is checked, make its following siblings grey */
+.rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}
+
+/* make all stars orange on rating group hover */
+.rating-group:hover .rating__label .rating__icon--star {
+    color: orange;
+}
+
+/* make hovered input's following siblings grey on hover */
+.rating__input:hover ~ .rating__label .rating__icon--star {
+  color: #ddd; }
