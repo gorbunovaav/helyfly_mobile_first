@@ -68,15 +68,6 @@
             top: 11px;
             right: 176px;
         }
-        // &::after {
-        //     content: "";
-        //     width: 668px;
-        //     height: 0.5px;
-        //     background-color: $secondaryColor;
-        //     position: absolute;
-        //     left:0;
-        //     top: 0;
-        // }
         @include media(sm){
             display: block;
         }

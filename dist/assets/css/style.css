@@ -1304,89 +1304,204 @@ body {
     }
 }
 
-.feedback .container {
+.feedback {
+  /* make hover effect work properly in IE */
+  /* hide radio inputs */
+  /* hide 'none' input from screenreaders */
+  /* set icon padding and size */
+  /* set default star color */
+  /* if any input is checked, make its following siblings grey */
+  /* make all stars orange on rating group hover */
+  /* make hovered input's following siblings grey on hover */ }
+  .feedback .container {
     margin: 0 auto;
-}
-
-.feedback__heading {
+    margin-bottom: 75px; }
+  .feedback__heading {
     text-align: center;
     font-weight: 400;
     font-size: 26px;
     line-height: 39px;
     color: #37373F;
-    margin-bottom: 50px;
-}
-
-.feedback__list-item--wrapper {
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.feedback__img {
+    margin-bottom: 50px; }
+    .feedback__heading--dots {
+      display: none; }
+      @media (min-width: 768px) {
+        .feedback__heading--dots {
+          display: inline-block; } }
+    @media (min-width: 768px) {
+      .feedback__heading {
+        text-align: left;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: #37373F; } }
+  @media (min-width: 576px) {
+    .feedback__list {
+      margin-bottom: 70px; } }
+  .feedback__list-item {
+    list-style-type: none;
+    margin-bottom: 74px;
+    position: relative; }
+    .feedback__list-item--wrapper {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin-bottom: 25px; }
+      @media (min-width: 576px) {
+        .feedback__list-item--wrapper {
+          margin-right: 200px; } }
+      @media (min-width: 768px) {
+        .feedback__list-item--wrapper {
+          margin: 0; } }
+    .feedback__list-item--last {
+      display: none; }
+      @media (min-width: 576px) {
+        .feedback__list-item--last {
+          display: block; } }
+    .feedback__list-item::after {
+      content: "";
+      width: 290px;
+      height: 0.5px;
+      background-color: #C7C7C7;
+      position: absolute;
+      left: 0;
+      bottom: -45px; }
+      @media (min-width: 576px) {
+        .feedback__list-item::after {
+          width: 505px; } }
+      @media (min-width: 768px) {
+        .feedback__list-item::after {
+          width: 510px;
+          left: 121px; } }
+  .feedback__img {
     width: 84px;
     height: 84px;
     margin-right: 18px;
-}
-
-.feedback__name {
+    margin-bottom: 24px; }
+    @media (min-width: 768px) {
+      .feedback__img {
+        width: 101px;
+        height: 101px; } }
+  .feedback__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #37373F;
-    margin-bottom: 6px;
-}
-
-.feedback__work {
+    margin-bottom: 6px; }
+    @media (min-width: 768px) {
+      .feedback__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #37373F; } }
+  .feedback__work {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     color: #37373F;
-    margin-bottom: 7px;
-}
-
-.rating-group {
+    margin-bottom: 7px; }
+  .feedback__recommend {
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B3B3B3;
+    position: relative; }
+    @media (min-width: 768px) {
+      .feedback__recommend {
+        -ms-flex-item-align: end;
+            align-self: flex-end; } }
+    .feedback__recommend::before {
+      content: "";
+      width: 16px;
+      height: 15px;
+      position: absolute;
+      background-image: url(./../images/feedback/feedback_pseudo.png);
+      top: 0px;
+      left: -19px; }
+  .feedback__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    width: 292px; }
+    @media (min-width: 576px) {
+      .feedback__text {
+        width: 505px; } }
+    @media (min-width: 768px) {
+      .feedback__text {
+        width: 510px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #37373F;
+        margin-left: 121px; } }
+  .feedback__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #B3B3B3; }
+    @media (min-width: 768px) {
+      .feedback__date {
+        margin-left: 121px; } }
+  .feedback__link {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    color: #5286EC;
+    position: relative; }
+    .feedback__link--wrapper {
+      text-align: center; }
+    .feedback__link::after {
+      content: "";
+      width: 6px;
+      height: 11px;
+      background: url(./../images/feedback/link_pseudo.png);
+      position: absolute;
+      right: -12px;
+      bottom: 4px; }
+      @media (min-width: 768px) {
+        .feedback__link::after {
+          display: none; } }
+    @media (min-width: 768px) {
+      .feedback__link::before {
+        content: "";
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        background-image: url(./../images/feedback/feedback_arrow_double.png);
+        top: 0px;
+        left: 0px; }
+      .feedback__link::after {
+        content: "";
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        background-image: url(./../images/feedback/feedback_arrow_double.png);
+        top: 0px;
+        right: 0px; } }
+  .feedback .rating-group {
     display: -ms-inline-flexbox;
-    display: inline-flex;
-}
-
-/* make hover effect work properly in IE */
-.rating__icon {
-    pointer-events: none;
-}
-
-/* hide radio inputs */
-.rating__input {
+    display: inline-flex; }
+  .feedback .rating__icon {
+    pointer-events: none; }
+  .feedback .rating__input {
     position: absolute !important;
-    left: -9999px !important;
-}
-
-/* hide 'none' input from screenreaders */
-.rating__input--none {
-    display: none;
-}
-
-/* set icon padding and size */
-.rating__label {
+    left: -9999px !important; }
+  .feedback .rating__input--none {
+    display: none; }
+  .feedback .rating__label {
     cursor: pointer;
     padding: 0 0.1em;
-    font-size: 2rem;
-}
-
-/* set default star color */
-.rating__icon--star {
-    color: orange;
-}
-
-/* if any input is checked, make its following siblings grey */
-.rating__input:checked ~ .rating__label .rating__icon--star {
-    color: #ddd;
-}
-
-/* make all stars orange on rating group hover */
-.rating-group:hover .rating__label .rating__icon--star {
-    color: orange;
-}
-
-/* make hovered input's following siblings grey on hover */
-.rating__input:hover ~ .rating__label .rating__icon--star {
-  color: #ddd; }
+    font-size: 2rem; }
+  .feedback .rating__icon--star {
+    color: orange; }
+  .feedback .rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd; }
+  .feedback .rating-group:hover .rating__label .rating__icon--star {
+    color: orange; }
+  .feedback .rating__input:hover ~ .rating__label .rating__icon--star {
+    color: #ddd; }

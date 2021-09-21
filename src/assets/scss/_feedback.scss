@@ -2,24 +2,50 @@
     .container{
         margin: 0 auto;
         @extend %container;
+        margin-bottom: 75px;
     }
     &__heading{
         text-align: center;
         @include text(26px, 400, 39px, $textColor);
         margin-bottom: 50px;
+        &--dots{
+            display: none;
+            @include media(sm){
+                display: inline-block;
+            }
+        }
+        @include media(sm){
+            text-align: left;
+            @include text(20px, 500, 29px, $textColor);
+        }
+        @include media(md){
+            @include text(28px, 500, 41px, $textColor);
+        }
     }
     &__list{
-        
+        @include media(xs){
+            margin-bottom: 70px;
+        }
         &-item{
             list-style-type: none;
             margin-bottom: 74px;
             position: relative;
             &--wrapper{
                 display:flex;
+                flex-wrap: wrap;
                 margin-bottom: 25px;
+                @include media(xs){
+                    margin-right: 200px;
+                    }
+                    @include media(sm){
+                        margin: 0;
+                    }
             }
             &--last{
                 display: none;
+                @include media(xs){
+                    display: block;
+                }
             }
             &::after {
                 content: "";
@@ -29,6 +55,13 @@
                 position: absolute;
                 left:0;
                 bottom:-45px;
+                @include media(xs){
+                    width: 505px;
+                }
+                @include media(sm){
+                    width: 510px;
+                    left: 121px;
+                }
             }
         }
     }
@@ -36,10 +69,18 @@
         width: 84px;
         height: 84px;
         margin-right: 18px;
+        margin-bottom: 24px;
+        @include media(sm){
+            width: 101px;
+            height: 101px;
+        }
     }
     &__name{
         @include text(16px, 500, 19px, $textColor);
         margin-bottom: 6px;
+        @include media(sm){
+            @include text(18px, 500, 22px, $textColor);
+        }
     }
     &__work{
         @include text(14px, 400, 21px, $textColor);
@@ -49,6 +90,9 @@
         margin-left: 20px;
         @include text(14px, 400, 21px, $textColorLight);
         position: relative;
+        @include media(sm){
+            align-self:flex-end;
+        }
         &::before{
             content: "";
             width: 16px;
@@ -63,15 +107,55 @@
         @include text(14px, 400, 21px, $textColor);
         margin-bottom: 50px;
         margin-top: 15px;
-        width: 292px;   
+        width: 292px;
+        @include media(xs){
+            width: 505px;
+        }
+        @include media(sm){
+            width: 510px;
+            @include text(16px, 400, 24px, $textColor);
+            margin-left: 121px;
+        }
     }
     &__date{
         @include text(14px, 400, 21px, $textColorLight);
+        @include media(sm){
+            margin-left: 121px;
+        }
     }
     &__link{
         @include text(17px, 500, 25px, $linkColor);
+        position: relative;
         &--wrapper{
             text-align: center;
+        }
+        &::after {
+            content: "";
+            width: 6px;
+            height: 11px;
+            background: url(./../images/feedback/link_pseudo.png);
+            position: absolute;
+            right: -12px;
+            bottom: 4px;
+            @include media(sm){
+                width: 11px;
+                height: 6px;
+                position: absolute;
+                background:url(./../images/feedback/feedback_arrow_double.png);
+                right: -20px;
+                bottom: 5px;
+            }
+        }
+        @include media(sm){
+            &::before{
+                content: "";
+                width: 11px;
+                height: 6px;
+                position: absolute;
+                background-image:url(./../images/feedback/feedback_arrow_double.png);
+                top: 9px;
+                left: -20px;
+            }
         }
     }
     .rating-group {
